@@ -1205,13 +1205,13 @@ body::after {
 }
 
 [data-watch] [class*=__container] {
-  -webkit-transform: translate(0, 4.375rem);
-      -ms-transform: translate(0, 4.375rem);
-          transform: translate(0, 4.375rem);
+  -webkit-transform: translate(0, 3.75rem);
+      -ms-transform: translate(0, 3.75rem);
+          transform: translate(0, 3.75rem);
   opacity: 0;
-  -webkit-transition: all 1.2s ease-in-out 0s;
-  -o-transition: all 1.2s ease-in-out 0s;
-  transition: all 1.2s ease-in-out 0s;
+  -webkit-transition: all 1s ease-in-out 0s;
+  -o-transition: all 1s ease-in-out 0s;
+  transition: all 1s ease-in-out 0s;
 }
 
 ._watcher-view [class*=__container] {
