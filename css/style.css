@@ -1014,6 +1014,10 @@ body::after {
   transition: all 0.3s ease 0s;
 }
 
+.dark-mode .tag {
+  color: #efefef;
+}
+
 .entrance-block__title,
 .entrance-block__info {
   line-height: 1.5;
@@ -1210,6 +1214,10 @@ body::after {
   margin-bottom: 1.0625rem;
 }
 
+.dark-mode .statistics {
+  color: #00293F;
+}
+
 .statistics__date {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1253,13 +1261,13 @@ body::after {
 }
 
 [data-watch] [class*=__container] {
-  -webkit-transform: translate(0, 3.75rem);
-      -ms-transform: translate(0, 3.75rem);
-          transform: translate(0, 3.75rem);
+  -webkit-transform: translate(0, 3.125rem);
+      -ms-transform: translate(0, 3.125rem);
+          transform: translate(0, 3.125rem);
   opacity: 0;
-  -webkit-transition: all 1s ease-in-out 0s;
-  -o-transition: all 1s ease-in-out 0s;
-  transition: all 1s ease-in-out 0s;
+  -webkit-transition: all 0.8s ease-in-out 0s;
+  -o-transition: all 0.8s ease-in-out 0s;
+  transition: all 0.8s ease-in-out 0s;
 }
 
 ._watcher-view [class*=__container] {
@@ -2985,6 +2993,10 @@ input[type=checkbox]:checked ~ label::before {
   margin-bottom: 1.0625rem;
 }
 
+.dark-mode .blog-page .statistics {
+  color: #efefef;
+}
+
 .blogs__items {
   display: -ms-grid;
   display: grid;
@@ -3211,6 +3223,10 @@ input[type=checkbox]:checked ~ label::before {
   margin-bottom: 1.25rem;
 }
 
+.dark-mode .comment-blog-inner__title {
+  color: #efefef;
+}
+
 .comment-body {
   padding-top: 1.25rem;
   border-top: 0.0625rem solid rgb(232, 237, 240);
@@ -3247,12 +3263,20 @@ input[type=checkbox]:checked ~ label::before {
   line-height: 1.5;
 }
 
+.dark-mode .comment-body__name {
+  color: #efefef;
+}
+
 .comment-body__name::before {
   color: #182C51;
   -webkit-box-flex: 0;
       -ms-flex: 0 0 0.875rem;
           flex: 0 0 0.875rem;
   width: 0.875rem;
+}
+
+.dark-mode .comment-body__name::before {
+  color: #70C851;
 }
 
 .comment-body__date-time {
