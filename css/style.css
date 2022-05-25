@@ -2783,6 +2783,10 @@ input[type=checkbox]:checked ~ label::before {
   color: #00293F;
 }
 
+.dark-mode .item-portfolio-2__title {
+  color: #efefef;
+}
+
 .company-page {
   margin-top: 6.375rem;
 }
