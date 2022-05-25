@@ -4249,16 +4249,33 @@
             }));
         }
     }), 0);
+    const toggleSwitch = document.querySelector("#toggle");
     const body = document.querySelector(".body");
-    const buttonBlock = document.querySelector(".theme-button");
-    document.querySelector(".theme-button__dark-button");
-    document.querySelector(".theme-button__light-button");
-    if (buttonBlock) document.addEventListener("click", (function(e) {
-        const targetElement = e.target;
-        if (targetElement.closest(".theme-button")) {
-            buttonBlock.classList.toggle("dark-on");
-            body.classList.toggle("dark-mode");
+    const toggleTitle = document.querySelector(".theme-toggle__title");
+    let isDark = "";
+    document.addEventListener("DOMContentLoaded", (function() {
+        isDark = localStorage.getItem("darkState");
+        if ("Dark" == isDark) {
+            toggleSwitch.setAttribute("checked", true);
+            body.classList.add("dark-mode");
+            toggleTitle.innerHTML = "Light Theme";
+        } else {
+            toggleSwitch.removeAttribute("checked");
+            body.classList.remove("dark-mode");
+            toggleTitle.innerHTML = "Dark Theme";
         }
+        toggleSwitch.onchange = e => {
+            if (e.currentTarget.checked) {
+                body.classList.add("dark-mode");
+                toggleTitle.innerHTML = "Light Theme";
+                isDark = "Dark";
+            } else {
+                body.classList.remove("dark-mode");
+                toggleTitle.innerHTML = "Dark Theme";
+                isDark = "";
+            }
+            localStorage.setItem("darkState", isDark);
+        };
     }));
     window["FLS"] = true;
     isWebp();
